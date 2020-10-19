@@ -25,7 +25,6 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 @JsonAutoDetect(fieldVisibility=JsonAutoDetect.Visibility.ANY)
 
-
 public class InfoCountry {
 	/**
 	 * Vengono utilizzate le annotazioni della libreria <code>JACKSON</code>
