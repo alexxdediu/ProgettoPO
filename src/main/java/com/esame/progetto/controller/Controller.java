@@ -17,6 +17,8 @@ import com.esame.progetto.model.InfoCountry;
 import com.esame.progetto.model.InfoDayOne;
 import com.esame.progetto.util.service.DayOneServiceImpl;
 import com.esame.progetto.util.service.SummaryServiceImpl;
+import com.esame.progetto.exceptions.BodyException;
+import com.esame.progetto.exceptions.ServiceException;
 import com.esame.progetto.model.CountriesBody;
 import com.esame.progetto.model.DailyIncreaseModel;
 import com.esame.progetto.model.MortalityRateModel;
@@ -78,13 +80,15 @@ public class Controller {
 	 * @return List di oggetti di tipo <code>InfoDayOne</code>.
 	 * @throws MalformedURLException
 	 * @throws IOException
+	 * @throws ServiceException 
 	 * @see {@link com.esame.progetto.util.service.DayOneServiceImpl#getDayOneData(String)}
 	 */
 	@RequestMapping(value="/data/dayone/{country}",method=RequestMethod.GET)
-	public  List<InfoDayOne> dayOneRequest( @PathVariable ("country") String country) throws MalformedURLException, IOException
+	public  List<InfoDayOne> dayOneRequest( @PathVariable ("country") String country) throws MalformedURLException, IOException, ServiceException 
 	{
-
-		return dayOneService.getDayOneData(country);
+		
+			return dayOneService.getDayOneData(country);
+		
 	}
 	
 	/**
@@ -98,10 +102,11 @@ public class Controller {
 	 * @return  <code>ArrayList</code> di oggetti di tipo <code>DailyIncreaseModel</code> analizzati.
 	 * @throws IOException 
 	 * @throws MalformedURLException 
+	 * @throws ServiceException 
 	 * @see {@link com.esame.progetto.util.stats.StatsDailyIncrease#dailyIncrease(List)}
 	 */
 	@RequestMapping(value="/stats/dayone/{country}", method = RequestMethod.GET)
-	public ArrayList<DailyIncreaseModel> statsDailyIncreaseRequest(@PathVariable ("country") String country) throws MalformedURLException, IOException
+	public ArrayList<DailyIncreaseModel> statsDailyIncreaseRequest(@PathVariable ("country") String country) throws MalformedURLException, IOException, ServiceException
 	{
 		StatsDailyIncrease stats= new StatsDailyIncrease();
 		List<InfoDayOne> list = dayOneService.getDayOneData(country);
@@ -115,22 +120,33 @@ public class Controller {
 	 * 
 	 * @param body :  paesi inseriti dall'utente.
 	 * @return oggetto <code>MortalityRateModel</code> analizzato.
+	 * @throws BodyException 
 	 * @throws JsonProcessingException 
 	 * @throws JsonMappingException 
 	 * @see {@link com.esame.progetto.util.stats.StatsMortalityRate#mortalityRate(ArrayList, ArrayList)}
 	 */
 	@RequestMapping(value="/stats/maxrate", method= RequestMethod.POST)
-	public  MortalityRateModel  statsMortalityRate(@RequestBody  String body) throws JsonMappingException, JsonProcessingException
+	public  MortalityRateModel  statsMortalityRate(@RequestBody  String body) throws BodyException, JsonMappingException, JsonProcessingException
 	{
 		//parsing body inserito dall'utente
 		 ObjectMapper obj= new ObjectMapper();
-		 CountriesBody  countries =obj.readValue(body, CountriesBody.class);
+		 CountriesBody countries = null;
+		try {
+			countries = obj.readValue(body, CountriesBody.class);
+		} catch (JsonMappingException e) {
+			 throw new BodyException("Body sbagliato o incompleto");
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		 CountriesBody countriesBody= new CountriesBody(countries.getCountriesList());
 		 StatsMortalityRate stat= new StatsMortalityRate();
-		 return stat.mortalityRate(summaryService.getSummaryData(), countriesBody.getCountriesList());
-		
-		
+		return  stat.mortalityRate(summaryService.getSummaryData(), countriesBody.getCountriesList());
 	}
+		
+		
+		
+	
 	
 	
 
