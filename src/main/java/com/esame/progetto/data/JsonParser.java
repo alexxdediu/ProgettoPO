@@ -24,10 +24,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * La classe <code>JsonParser</code> viene utilizzata
  * per la deserializzazione dei dati in formato <code>JSON</code>.
+ * Viene utilizzata principalmente nel package {@link com.esame.progetto.util.service}
+ * nei metodi {@link com.esame.progetto.util.service.SummaryServiceImpl#getSummaryData()} e 
+ * {@link com.esame.progetto.util.service.DayOneServiceImpl#getDayOneData(String)}
+ * per il parsing dei dati ottenuti dalle rotte della classe {@link com.esame.progetto.controller.Controller}.
  * 
  * 
  * @author Alex Dediu
- * @see	com.esame.progetto.model.InfoCountry
+ * @see	{@link com.esame.progetto.model.InfoCountry}
+ * @see {@link com.esame.progetto.model.InfoDayOne}
+ * 
  */
 
 
@@ -133,28 +139,5 @@ public class JsonParser {
 		
 		
 	}
-	/**
-	public  String countryParser(String url)
-	{
-		URLConnection urlConnection = null;
-		InputStream input= null;
-		
-		try {
-			urlConnection = new URL(url).openConnection();
-		} catch (IOException e) {
-			
-			e.printStackTrace();
-		}
-		try {
-			 input=urlConnection.getInputStream();
-		} catch (IOException e) {
-			
-			e.printStackTrace();
-		}
-		InputStreamReader inR= new InputStreamReader(input);
-		BufferedReader buffer= new BufferedReader(inR);
-		String line="";
-		
-	}
-	*/
+	
 }

@@ -17,9 +17,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
  * per il parsing dei dati.
  * 
  * 
- * @author  Alex Dediu
- * @see   com.fasterxml.jackson.annotation
- * @see   com.esame.progetto.model.InfoCountry
+ * @author  Alexandru Dediu
+ * @see  {@link com.fasterxml.jackson.annotation}
+ * @see  {@link  com.esame.progetto.model.InfoCountry}
  */
 @JsonAutoDetect(fieldVisibility=JsonAutoDetect.Visibility.ANY)
 

@@ -2,41 +2,52 @@ package com.esame.progetto.util.stats;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
+import com.esame.progetto.model.DailyIncreaseModel;
 import com.esame.progetto.model.InfoDayOne;
 /**
  * Classe utilizzata per efettuare una statistica sull'incremento giornaliero del tasso di mortlità.
- * Vengono analizzati i dati ottenuti dalla rotta  <code>"/data/dayone"</code> del controller.
+ * Vengono analizzati i dati ottenuti dalla rotta  <code>"/data/dayone"</code> della classe
+ * {@link com.esame.progetto.controller.Controller}.
+ * 
  * 
  * @author  Alexandru Dediu
- * @see com.esame.progetto.util.stats.Stats
+ * @see {@link com.esame.progetto.util.stats.Stats}
  *
  */
 
-public class StatsDailyIncrease {
-	
-
+public class StatsDailyIncrease extends Stats {
+	/**
+	 * Metodo che converte una Stringa in oggetto di tipo Double.
+	 * utilizzato per  il numero dei decessi.
+	 * @param s : Stringa da convertire.
+	 */
+	@Override
+	 public Object convertString(String s) {
+		  Double d= Double.parseDouble(s);
+		return d;
+	}
 /**
- * Metodo che riporta un <code>ArrayList</code> nel quale in ogni  oggetto di tipo <code>Stats</code>
+ * Metodo che riporta un <code>ArrayList</code> nel quale ad ogni oggetto di tipo <code>Stats</code>
  * vengono assegnati  i valori del tasso di incremento percentuale  e il range delle date.
  * 
- * @param response Risposta ottenuta dalla rotta <code>"/data/dayone"</code>,che contiene i dati da analizzare
- * @return <code>ArrayLisy</code> con valori assegnati per ogni oggetto <code>Stats</code>.
- * @see  com.esame.progetto.controller
+ * @param response :  Dati ottenuti dalla rotta <code>"/data/dayone"</code>.
+ * @return <code>ArrayList</code> con valori assegnati per ogni oggetto <code>Stats</code>.
+ * @see  {@link com.esame.progetto.model.DailyIncreaseModel}
+ * @see  {@link com.esame.progetto.controller.Controller#statsDailyIncreaseRequest(String)}
  */
 
-	public ArrayList<Stats> dailyIncrease(List<InfoDayOne> response) {
-
-		ArrayList<Stats> statsList = new ArrayList<Stats>();
+	public ArrayList<DailyIncreaseModel> dailyIncrease(List<InfoDayOne> response) {
+		
+		ArrayList<DailyIncreaseModel> statsList = new ArrayList<DailyIncreaseModel>();
 
 		for (int i = 0; i <= response.size() - 2; i++) {
 
 			for (int j = i + 1; j <= response.size() - 1; j++) {
 				
 				ArrayList<String> dates = new ArrayList<String>();
-				Stats s = new Stats();
+				DailyIncreaseModel s = new DailyIncreaseModel();
 				// aggiunte data di inizio e data finale 
 				dates.add(response.get(i).getDate());
 				dates.add(response.get(j).getDate());
@@ -44,13 +55,13 @@ public class StatsDailyIncrease {
 				s.setDates(dates);
 				statsList.add(s);
 				// vengono assegnati i valori da analizzare ottenuti dalla risposta
-				Double a = response.get(i).stringInDouble(response.get(i).getnDeaths());
-				Double b = response.get(j).stringInDouble(response.get(j).getnDeaths());
+				Double a = (Double) convertString(response.get(i).getnDeaths());
+				Double b = (Double)  convertString(response.get(j).getnDeaths());
 				
 				// possibili casi per il calcolo del tasso di incremento percentuale
 				if (b > a) {
 					if (a == 0) {
-						//nessun incremento se il giorno precedente il numero di decessi corrispondeva a 0
+						//nessun incremento se nel  giorno precedente il numero di decessi corrisponde a 0
 						s.setDailyIncrease("Nessun Incremento");
 						break;
 					} else if (a > 0) {
@@ -91,6 +102,9 @@ public class StatsDailyIncrease {
 		return statsList;
 
 	}
+
+
+
 
 }
 

@@ -9,9 +9,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
  * Contiene un <code>ArrayList</code> di oggetti <code>InfoDayOne</code>.
  * vengono utilizzate le annotazioni della libreria <code>JACKSON</code> per il parsing dei dati.
  *
- * @author Alex Dediu
- * @see com.esame.progetto.model.InfoDayOne
- * @see com.fasterxml.jackson.annotation
+ * @author Alexandru Dediu
+ * @see  {@linkcom.esame.progetto.model.InfoDayOne}
+ * @see  {@link com.fasterxml.jackson.annotation}
  *
  */
 

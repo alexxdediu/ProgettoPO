@@ -8,7 +8,16 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+/**
+ *La classe <code>InfoDayOne</code> viene utilizzata
+ *per la conversione dei dati in formato  <code>JSON</code> necessari.
+ *Viene utilizzata principalmente per  la conversione de dati nel metodo 
+ *{@link com.esame.progetto.controller.Controller#dayOneRequest(String)}.
+ *
+ * @author Alexandru Dediu
+ * @see {@link com.esame.progetto.model.ResponseDayOne}
+ *
+ */
 @JsonAutoDetect(fieldVisibility=JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties({"CountryCode","Province","City","CityCode","Lat","Lon","Recovered","Active"})
 public class InfoDayOne {
@@ -20,7 +29,14 @@ public class InfoDayOne {
 	private String nConfirmed;
 	@JsonProperty(value="Date")
 	private String date;
-	
+	/**
+	 * Costruttore della classe <code>InfoDayOne</code> utilizzato per inizializzare
+	 * le variabili di istanza  con i dati ottenuti dal parsing dei dati <code>JSON</code>.
+	 * @param name  : nome del paese
+	 * @param deaths : numero di decessi
+	 * @param confirmed : numero di casi confermati.
+	 * @param dateJson : periodo nel quale sono stati registrati i dati
+	 */
 	public InfoDayOne(@JsonProperty(value="Country") String name, @JsonProperty(value="Deaths") String deaths,@JsonProperty(value="Confirmed") String confirmed,@JsonProperty(value="Date") String dateJson) {
 		
 		this.countryName = name;
@@ -80,6 +96,7 @@ public class InfoDayOne {
 		
 		
 	}
+
 	public Double stringInDouble(String cases)
 	{
 		  Double a =Double.parseDouble(cases);

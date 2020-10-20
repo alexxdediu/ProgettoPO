@@ -8,10 +8,11 @@ import com.esame.progetto.model.InfoCountry;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 /**
+ * Interfaccia utilizzata per restituire i dati della rotta <code>"/data/summary"</code>.
  * 
- * 
- * @author  Alex Dediu
- *
+ * @author  Alexandru Dediu
+ * @see {@link com.esame.progetto.controller}
+ * @see {@link com.esame.progetto.model.InfoCountry}
  */
 @Service
 public interface SummaryService {
