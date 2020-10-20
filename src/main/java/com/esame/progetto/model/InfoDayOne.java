@@ -55,7 +55,8 @@ public class InfoDayOne {
 	}
 
 	public String getDate() {
-		return date;
+		String date1= date.substring(0,10);
+		return date1;
 	}
 
 	public void setDate(String date) {
@@ -76,6 +77,13 @@ public class InfoDayOne {
 		Calendar cal=Calendar.getInstance();
 		 cal.setTime(d);
 		return cal;
+		
+		
+	}
+	public Double stringInDouble(String cases)
+	{
+		  Double a =Double.parseDouble(cases);
+		  return a;
 		
 		
 	}

@@ -3,11 +3,13 @@ package com.esame.progetto.controller;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +22,8 @@ import com.esame.progetto.model.ResponseSummary;
 import com.esame.progetto.util.filter.CountryBody;
 import com.esame.progetto.util.service.DayOneServiceImpl;
 import com.esame.progetto.util.service.SummaryServiceImpl;
+import com.esame.progetto.util.stats.Stats;
+import com.esame.progetto.util.stats.StatsDailyIncrease;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,6 +38,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 @RestController
 public class Controller {
+	
 	@Autowired
 	private SummaryServiceImpl summaryService;
 	@Autowired
@@ -92,10 +97,20 @@ public class Controller {
 	 * Questo metodo gestisce la rotta <code>"/stats"</code>
 	 * che utilizza una chiamata di tipo <code>GET</code>.
 	 * Restituisce le statistiche effettuate  su un dataset.
+	 * @throws IOException 
+	 * @throws MalformedURLException 
 	 */
-	@RequestMapping(value="/stats/", method = RequestMethod.GET)
-	public void statsRequest()
+	@RequestMapping(value="/stats/dayone/{country}", method = RequestMethod.GET)
+	public ArrayList< Stats> statsRequest(@PathVariable ("country") String country) throws MalformedURLException, IOException
 	{
+		StatsDailyIncrease stats= new StatsDailyIncrease();
+		 return stats.dailyIncrease(dayOneService.getDayOneData(country));
+		
+		
+		
+		
+		
+		
 		
 	}
 	/**
@@ -103,7 +118,7 @@ public class Controller {
 	 * che utilizza una chiamata di tipo <code>POST</code>.
 	 * Restituisce una statistica effettuta su un dataset con paesi selezionati dall'utente.
 	 * 
-	 * @param body : paesi inseriti dall'utente.
+	 * @param body  paesi inseriti dall'utente.
 	 */
 	@RequestMapping(value="/stats/countries", method= RequestMethod.POST)
 	public  void statsByCountries(@RequestBody  String body)
