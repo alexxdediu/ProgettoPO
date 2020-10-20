@@ -7,6 +7,8 @@ package com.esame.progetto.exceptions;
  */
 public class BodyException extends Exception {
 
+	private static final long serialVersionUID = 1L;
+
 	public BodyException(String message) {
 		super(message);
 		

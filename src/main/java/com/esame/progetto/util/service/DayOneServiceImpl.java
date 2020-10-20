@@ -1,7 +1,6 @@
 package com.esame.progetto.util.service;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import com.esame.progetto.data.JsonParser;
