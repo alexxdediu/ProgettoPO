@@ -4,8 +4,7 @@ Questa applicazione  permette di effettuare statistiche su dati  selezionati dal
 ## COSA SI PUO' FARE?
 Diagramma dei casi d'uso:
 
-<img src="https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg" width="200" height="200"> (https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg)
-
+<img src="https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg" width="250" height="300"> 
 
 
 
