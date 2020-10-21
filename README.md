@@ -53,3 +53,16 @@ Di seguito vengono riportate le possibili richieste:
  ```
  {"countries" : ["Italy","Albania","Romania"]}
  ```
+ ### Esempio statistica
+ ```
+ {
+    "compareCountries": [
+        "Germany",
+        "Italy",
+        "South-Africa"
+    ],
+    "countryName": "Italy",
+    "maxRate": 36705
+}
+ ```
+ 
