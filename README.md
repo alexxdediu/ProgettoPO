@@ -3,7 +3,8 @@ Questa applicazione  permette di effettuare statistiche su dati  selezionati dal
 
 ## COSA SI PUO' FARE?
 Diagramma dei casi d'uso:
-![](https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg {width:50%})
+
+![](https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg = 50%)
 
 
 
