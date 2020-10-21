@@ -5,18 +5,18 @@ import java.util.ArrayList;
 
 public class MortalityRateModel{
 	
-	private ArrayList<String> compareCountriesNames;
+	private ArrayList<String> compareCountries;
 	
 	private String countryName;
 	private Integer maxRate;
 	
 
-	public ArrayList<String> getCompareCountriesNames() {
-		return compareCountriesNames;
+	public ArrayList<String> getCompareCountries() {
+		return compareCountries;
 	}
 
-	public void setCompareCountriesNames(ArrayList<String> compareCountriesNames) {
-		this.compareCountriesNames = compareCountriesNames;
+	public void setCompareCountries(ArrayList<String> compareCountriesNames) {
+		this.compareCountries = compareCountriesNames;
 	}
 
 	public String getCountryName() {

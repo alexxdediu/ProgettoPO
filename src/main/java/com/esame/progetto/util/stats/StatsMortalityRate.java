@@ -10,6 +10,7 @@ import com.esame.progetto.model.MortalityRateModel;
 /**
  * Classe utilizzata per efettuare una statistica su un <code>ArrayList</code> di paesi.
  * vengono analizzati i dati ottenuti dalla rotta <code>"data/summary"</code>.
+ * Riporta il tasso di mortalità più alto tra i paesi inseriti dall'utente.
  * 
  * @author Alexandru Dediu
  * @see {@link com.esame.progetto.model.InfoCountry}
@@ -46,7 +47,7 @@ public class StatsMortalityRate extends Stats{
 			for(String s : countries)
 			{
 				//vengono assegnati  i paesi inseriti dall'utente alla variabile di istanza dell'oggetto.
-				model.setCompareCountriesNames(countries);
+				model.setCompareCountries(countries);
 				
 				if(i.getCountryName().equals(s))
 				{
