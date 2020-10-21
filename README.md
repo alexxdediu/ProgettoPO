@@ -7,10 +7,10 @@ Le richieste vengono effettuate con un [POSTMAN](https://www.postman.com/).
 Di
 |ROTTA | BODY | TIPO | 
 |---|---|---|
-| /data/summary |GET|
-|/data/dayone/{country}|GET|
-|"/stats/maxrate"|Stringa con massimo n paesi |POST|
-|/stats/dayone/{country}|GET|
+| /data/summary | |GET|
+|/data/dayone/{country}| |GET|
+|/stats/maxrate|Stringa con massimo n paesi |POST|
+|/stats/dayone/{country}| |GET|
 
  ### Descrizione delle rotta
  ### Esempio di risposta ottenuta da richiesta di tipo GET con dati selezionati
