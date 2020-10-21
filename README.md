@@ -3,8 +3,8 @@ L'applicazione presente in questa repository permette  effettuare statistiche su
 
 ## COSA SI PUO' FARE?
 ## QUALI RICHIESTE SI POSSONO EFFETTUARE?
-Le richieste vengono effettuate con un [POSTMAN](https://www.postman.com/).
-Di
+Le richieste vengono effettuate con [POSTMAN](https://www.postman.com/).
+Di seguito vengono riportate le possibili richieste:
 |ROTTA | BODY | TIPO | 
 |---|---|---|
 | /data/summary | |GET|
@@ -13,6 +13,17 @@ Di
 |/stats/dayone/{country}| |GET|
 
  ### Descrizione delle rotta
+ > **GET** /data/summary
+ Utilizzando questa rotta si possono selezionare i dati ,ignorando i campi non necessari.
+ > **GET** /data/dayone/{country}
+ Utilizzando questa rotta si possono ottenere i dati relativi ad un paese.
+ Vengono riportati i dati dal primo giorno di Pandemia alla data odierna.
+ > **POST** /stats/maxrate
+ Utilizzando questa rotta è possibile effettuare una statistica che riporta il paese con il maggior ***TASSO DI MORTALITA'*** tra i paesi inseriti dall'utente tramite un body.
+ > **GET** /stats/dayone/{country}
+ Utilizzando questa rotta è possibile effettuare una statistica che riporta il ***TASSO DI INCREMENTO GIORNALIERO*** del numero di decessi di un determinato paese inserito dall'utente
+ 
+ 
  ### Esempio di risposta ottenuta da richiesta di tipo GET con dati selezionati
  ```
  [
