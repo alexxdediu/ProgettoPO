@@ -76,5 +76,5 @@ Di seguito vengono riportate le possibili richieste:
   ### Diagramma dei package
  <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/PackageDiagram.jpg" width="400" height="300"> 
  ### Diagramma delle classi
-   ### controller
+ > **Controller**
 <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramController.jpg" width="400" height="300"> 
