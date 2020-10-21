@@ -81,3 +81,7 @@ Di seguito vengono riportate le possibili richieste:
  > **Controller**
  
 <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramController.jpg" width="400" height="300"> 
+
+> **Model**
+img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramModel.jpg" width="400" height="300"> 
+
