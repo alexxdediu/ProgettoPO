@@ -1,4 +1,4 @@
-## INTRODUZIONE
+### INTRODUZIONE
 L'applicazione presente in questa repository permette  effettuare statistiche su dati  selezionati dalle [CORONAVIRUS COVID19 API](https://documenter.getpostman.com/view/10808728/SzS8rjbc#00030720-fae3-4c72-8aea-ad01ba17adf8).
 
 ## COSA SI PUO' FARE?
@@ -16,11 +16,11 @@ Di seguito vengono riportate le possibili richieste:
  
  > **GET** /data/summary
  
- Utilizzando questa rotta si possono selezionare i dati ,ignorando i campi non necessari.
+ Utilizzando questa rotta si possono selezionare i dati da [***SUMMARY***](https://documenter.getpostman.com/view/10808728/SzS8rjbc#00030720-fae3-4c72-8aea-ad01ba17adf8),ignorando i campi non necessari.
  
  > **GET** /data/dayone/{country}
  
- Utilizzando questa rotta si possono ottenere i dati relativi ad un paese.
+ Utilizzando questa rotta si possono ottenere i dati relativi ad un paese da [***DAY ONE ALL STATUS***](https://documenter.getpostman.com/view/10808728/SzS8rjbc#d0ca988a-ac5f-4d30-ab64-b188e45149e4).
  Vengono riportati i dati dal primo giorno di Pandemia alla data odierna.
  
  > **POST** /stats/maxrate
