@@ -1,4 +1,4 @@
-### INTRODUZIONE
+## INTRODUZIONE
 Questa applicazione  permette di effettuare statistiche su dati  selezionati dalle [CORONAVIRUS COVID19 API](https://documenter.getpostman.com/view/10808728/SzS8rjbc#00030720-fae3-4c72-8aea-ad01ba17adf8).
 
 ## COSA SI PUO' FARE?
@@ -65,4 +65,4 @@ Di seguito vengono riportate le possibili richieste:
     "maxRate": 36705
 }
  ```
- 
+ ##UML
