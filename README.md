@@ -74,4 +74,4 @@ Di seguito vengono riportate le possibili richieste:
  ```
  ## UML
   ### Diagramma dei package
- 
+ <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/PackageDiagram.jpg" width="400" height="300"> 
