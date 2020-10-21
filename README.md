@@ -3,7 +3,7 @@ Questa applicazione  permette di effettuare statistiche su dati  selezionati dal
 
 ## COSA SI PUO' FARE?
 
-<img src="https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg" width="400" "height=250">
+<img src="https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg" width="200" "height=250">
 ## QUALI RICHIESTE SI POSSONO EFFETTUARE?
 Le richieste vengono effettuate con [POSTMAN](https://www.postman.com/).
 Di seguito vengono riportate le possibili richieste:
