@@ -3,11 +3,13 @@ L'applicazione presente in questa repository permette  effettuare statistiche su
 
 ## COSA SI PUO' FARE?
 ## QUALI RICHIESTE SI POSSONO EFFETTUARE?
+Le richieste vengono effettuate con un [POSTMAN](https://www.postman.com/).
+Di
 |ROTTA | BODY | TIPO | 
-|---|---|---|---|
-| /data/summary |  GET|
+|---|---|---|
+| /data/summary |GET|
 |/data/dayone/{country}|GET|
-|"/stats/maxrate"|Stringa con massimo n paesi ||POST|
+|"/stats/maxrate"|Stringa con massimo n paesi |POST|
 |/stats/dayone/{country}|GET|
 
  ### Descrizione delle rotta
