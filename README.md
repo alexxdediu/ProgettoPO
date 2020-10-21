@@ -72,7 +72,6 @@ Di seguito vengono riportate le possibili richieste:
     "maxRate": 36705
 }
  ```
- ### UML
-  #### DIAGRAMMA DEI PACKAGE
-  
+ ## UML
+  ### Diagramma dei package
  
