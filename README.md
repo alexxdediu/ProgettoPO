@@ -19,7 +19,7 @@ Di seguito vengono riportate le possibili richieste:
 |/stats/maxrate|Stringa con massimo n paesi |POST|
 |/stats/dayone/{country}| |GET|
 
- ### Descrizione delle rotta
+ ### Descrizione delle rotte
  
  > **GET** /data/summary
  
