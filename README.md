@@ -2,8 +2,13 @@
 Questa applicazione  permette di effettuare statistiche su dati  selezionati dalle [CORONAVIRUS COVID19 API](https://documenter.getpostman.com/view/10808728/SzS8rjbc#00030720-fae3-4c72-8aea-ad01ba17adf8).
 
 ## COSA SI PUO' FARE?
+Diagramma dei casi d'uso:
 
 <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/UseCaseDiagramProject.jpg" width="200" "height=250">
+
+
+
+
 ## QUALI RICHIESTE SI POSSONO EFFETTUARE?
 Le richieste vengono effettuate con [POSTMAN](https://www.postman.com/).
 Di seguito vengono riportate le possibili richieste:
