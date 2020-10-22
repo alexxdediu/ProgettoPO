@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.esame.progetto"},{"l":"com.esame.progetto.controller"},{"l":"com.esame.progetto.data"},{"l":"com.esame.progetto.exceptions"},{"l":"com.esame.progetto.model"},{"l":"com.esame.progetto.util.service"},{"l":"com.esame.progetto.util.stats"}]
