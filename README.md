@@ -77,6 +77,7 @@ Di seguito vengono riportate le possibili richieste:
  <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/PackageDiagram.jpg" width="400" height="300"> 
  
  ### Diagramma delle classi
+ il resto dei diagrammi delle classi sono disponibili nella [repository](https://github.com/alexxdediu/ProgettoPO).
  
  > **Controller**
  
@@ -92,6 +93,7 @@ Di seguito vengono riportate le possibili richieste:
 <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramUtil.jpg" width="600" height="400">
 
 ### Diagramma delle sequenze
+ Il resto dei diagrammi delle sequenze  sono disponibili nella [repository](https://github.com/alexxdediu/ProgettoPO).
  
  > **statsRate**
  
@@ -102,4 +104,13 @@ Di seguito vengono riportate le possibili richieste:
  <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/SequenceDiagramdayOneRequest1.jpg" width="600" height="400">
  
  
+### SOFTWARE UTILIZZATI
+
+* [Eclipse] (https://www.eclipse.org/downloads/)
+* [Maven] (https://maven.apache.org/)
+* [Spring] (https://spring.io/)
+
+### AUTORE
+
+**Alexandru Dediu**
 
