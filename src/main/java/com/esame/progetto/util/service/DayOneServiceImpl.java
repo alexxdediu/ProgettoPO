@@ -21,7 +21,7 @@ public class DayOneServiceImpl implements DayOneService{
 	public List<InfoDayOne> getDayOneData(String country) throws ServiceException    {
 		JsonParser parser= new JsonParser();
 		 try {
-			return parser.DataParserDayOne( "https://api.covid19api.com/dayone/country/"+ country);
+			return parser.dataParserDayOne( "https://api.covid19api.com/dayone/country/"+ country);
 		} catch (IOException e) {
 			throw new ServiceException("problema di Input");
 		}

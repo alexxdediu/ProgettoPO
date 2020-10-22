@@ -47,7 +47,7 @@ public class JsonParser {
 	 * @throws JsonProcessingException 
 	 * @throws JsonMappingException 
 	 */
-	public ArrayList<InfoCountry> DataParserSummary(String url) throws JsonMappingException, JsonProcessingException
+	public ArrayList<InfoCountry> dataParserSummary(String url) throws JsonMappingException, JsonProcessingException
 	{
 			
 		
@@ -104,7 +104,7 @@ public class JsonParser {
 	 * @throws IOException 
 	 * @throws MalformedURLException 
 	 */
-	public List<InfoDayOne> DataParserDayOne(String url) throws MalformedURLException, IOException
+	public List<InfoDayOne> dataParserDayOne(String url) throws MalformedURLException, IOException
 	{
 		ArrayList<InfoDayOne> array= new ArrayList<InfoDayOne>();
 		

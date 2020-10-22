@@ -1,0 +1,7 @@
+com.esame.progetto
+com.esame.progetto.controller
+com.esame.progetto.data
+com.esame.progetto.exceptions
+com.esame.progetto.model
+com.esame.progetto.util.service
+com.esame.progetto.util.stats

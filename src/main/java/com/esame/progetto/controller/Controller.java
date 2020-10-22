@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.esame.progetto.model.InfoCountry;
 import com.esame.progetto.model.InfoDayOne;
+import com.esame.progetto.model.MortRateConfModel;
 import com.esame.progetto.util.service.DayOneServiceImpl;
 import com.esame.progetto.util.service.SummaryServiceImpl;
 import com.esame.progetto.exceptions.BodyException;
@@ -25,6 +26,7 @@ import com.esame.progetto.model.MortalityRateModel;
 
 import com.esame.progetto.util.stats.StatsDailyIncrease;
 import com.esame.progetto.util.stats.StatsMortalityRate;
+import com.esame.progetto.util.stats.StatsMortalityRateConf;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -143,7 +145,28 @@ public class Controller {
 		 StatsMortalityRate stat= new StatsMortalityRate();
 		return  stat.mortalityRate(summaryService.getSummaryData(), countriesBody.getCountriesList());
 	}
+	/**
+	 * Questo metodo gestisce la rotta <code>"/stats/rate"</code>
+	 * che utilizza una chiamata di tipo <code>POST</code>.
+	 * Restituisce una statistica effettuata su un dataset con paesi inseriti dall'utente.
+	 * @param countries : lista di paesi inseriti dall'utente.
+	 * @return ArrayList di oggetti analizzati
+	 * @throws JsonMappingException
+	 * @throws JsonProcessingException
+	 * @see {@link com.esame.progetto.util.stats.StatsMortalityRateConf#getRatePerc(ArrayList, ArrayList)}
+	 */
+	@RequestMapping(value="/stats/rate" , method=RequestMethod.POST)
+	public ArrayList<MortRateConfModel>	statsRate(@RequestBody String countries) throws JsonMappingException, JsonProcessingException
+	{
+		ObjectMapper mapper= new ObjectMapper();
+	
+		CountriesBody cBody = mapper.readValue(countries, CountriesBody.class) ;
+		StatsMortalityRateConf stats= new StatsMortalityRateConf();
+		 return stats.getRatePerc(summaryService.getSummaryData(),cBody.getCountriesList());
 		
+		
+	
+	}
 		
 		
 	
