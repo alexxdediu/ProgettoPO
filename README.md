@@ -106,9 +106,9 @@ Di seguito vengono riportate le possibili richieste:
  
 ### SOFTWARE UTILIZZATI
 
-* [Eclipse] (https://www.eclipse.org/downloads/)
-* [Maven] (https://maven.apache.org/)
-* [Spring] (https://spring.io/)
+*  [Eclipse] (https://www.eclipse.org/downloads/)
+*  [Maven] (https://maven.apache.org/)
+*  [Spring] (https://spring.io/)
 
 ### AUTORE
 
