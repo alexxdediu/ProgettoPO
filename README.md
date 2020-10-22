@@ -85,5 +85,5 @@ Di seguito vengono riportate le possibili richieste:
 
 > **Model**
 
-<img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramModel.jpg" width="500" height="350"> 
+<img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramModel.jpg" width="600" height="400"> 
 
