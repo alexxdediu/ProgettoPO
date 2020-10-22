@@ -22,7 +22,7 @@ public class SummaryServiceImpl implements SummaryService {
 	@Override
 	public ArrayList<InfoCountry> getSummaryData() throws JsonMappingException, JsonProcessingException {
 		JsonParser p= new JsonParser();
-		return p.DataParserSummary("https://api.covid19api.com/summary");
+		return p.dataParserSummary("https://api.covid19api.com/summary");
 		
 	}
 	
