@@ -87,3 +87,8 @@ Di seguito vengono riportate le possibili richieste:
 
 <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramModel.jpg" width="700" height="400"> 
 
+> **Util**
+
+<img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramUtil.jpg" width="600" height="400">
+
+
