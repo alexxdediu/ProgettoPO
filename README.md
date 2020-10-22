@@ -91,4 +91,15 @@ Di seguito vengono riportate le possibili richieste:
 
 <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/ClassDiagramUtil.jpg" width="600" height="400">
 
+### Diagramma delle sequenze
+ 
+ > **statsRate
+ 
+ <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/SequenceDiagramStatsMaxRate1.jpg" width="600" height="400">
+ 
+ > **dayOneRequest
+ 
+ <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/SequenceDiagramdayOneRequest1.jpg" width="600" height="400">
+ 
+ 
 
