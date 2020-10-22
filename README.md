@@ -104,13 +104,13 @@ Di seguito vengono riportate le possibili richieste:
  <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/SequenceDiagramdayOneRequest1.jpg" width="600" height="400">
  
  
-### SOFTWARE UTILIZZATI
+## SOFTWARE UTILIZZATI
 
 *  [Eclipse](https://www.eclipse.org/downloads/)
 *  [Maven](https://maven.apache.org/)
 *  [Spring](https://spring.io/)
 
-### AUTORE
+## AUTORE
 
 **Alexandru Dediu**
 
