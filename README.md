@@ -93,11 +93,11 @@ Di seguito vengono riportate le possibili richieste:
 
 ### Diagramma delle sequenze
  
- > **statsRate
+ > **statsRate**
  
  <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/SequenceDiagramStatsMaxRate1.jpg" width="600" height="400">
  
- > **dayOneRequest
+ > **dayOneRequest**
  
  <img src="https://github.com/alexxdediu/ProgettoPO/blob/master/SequenceDiagramdayOneRequest1.jpg" width="600" height="400">
  
